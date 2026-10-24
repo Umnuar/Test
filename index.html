@@ -1237,6 +1237,7 @@
       padding: 0.65rem 0.75rem;
       border-bottom: 1px solid var(--gray-100);
       color: var(--gray-700);
+      white-space: nowrap;
     }
     .history-table tr:hover td {
       background: var(--gray-50);
@@ -1244,9 +1245,10 @@
     .history-score-badge {
       display: inline-block;
       padding: 0.15rem 0.5rem;
-      border-radius: 9999px;
+      border-radius: var(--radius-sm);
       font-weight: 700;
-      font-size: 0.75rem;
+      font-size: 0.8125rem;
+      white-space: nowrap;
     }
     .history-empty {
       padding: 2.5rem 1rem;
@@ -2410,7 +2412,7 @@
           tableHtml += '<tr>' +
             '<td><strong>#' + item.attempt + '</strong></td>' +
             '<td>' + escapeHtml(item.date) + '</td>' +
-            '<td><span class="history-score-badge result-grade-tag ' + badgeClass + '">' + item.score.toFixed(2) + ' / 10</span></td>' +
+            '<td><span class="history-score-badge result-grade-tag ' + badgeClass + '">' + item.score.toFixed(2) + '</span></td>' +
             '<td>' + item.correctCount + ' / ' + item.total + '</td>' +
             '<td>' + escapeHtml(item.timeSpent) + '</td>' +
             '</tr>';
